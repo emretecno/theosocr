@@ -4,11 +4,11 @@ This is a simple OCR library that uses the Theos OCR API to extract text from im
 
 ## Installation
 
-```
+```bash
 pip install theosocr
 ```
 ## use 
-```
+```python
 from theosocr import theos_ocr_file, theos_ocr_base64
 
 # OCR işlemi yapılacak dosya adı
