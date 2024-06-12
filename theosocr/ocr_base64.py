@@ -18,5 +18,8 @@ def theos_ocr_base64(base64_image, overlay=False, language='eng', api_key='K8290
         'base64Image': base64_image,
     }
     r = requests.post('https://api.ocr.space/parse/image', data=payload)
-    return r.json()
+    result=r.json()
+    parsed_text = result['ParsedResults'][0]['ParsedText'].strip().replace('\r\n', '')
+    
+    return parsed_text
     
