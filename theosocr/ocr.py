@@ -19,8 +19,6 @@ def theos_ocr_file(filename, overlay=False, language='eng'):
                           files={filename: f},
                           data=payload,
                           )
-    result=r.json()
-    parsed_text = result['ParsedResults'][0]['ParsedText'].strip().replace('\r\n', '')
     
-    return parsed_text
+    return r.json()
   
